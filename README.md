@@ -1,24 +1,24 @@
-# README
+Clone the repo into your local machine
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Run the following inside project terminal:
 
-Things you may want to cover:
+buundle install
+rake db:create
 
-* Ruby version
+For Task 2
 
-* System dependencies
+Run the following to test:
 
-* Configuration
+rails db:migrate
+rails db:seed
 
-* Database creation
+# This will create three baskets with capacity 27,27,13
+# respectively.
+# Set Basket 1 to have "Red" apples, Basket 2,3 to have "Fuji"
+# Now try adding 27+27 Red apples
 
-* Database initialization
+rails add_apple_to_basket["Red",27]
+rails add_apple_to_basket["Red",27]
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Result: All baskets are full. We couldn't find the place for 14 apples
+# because 54-(27+13) = 14
